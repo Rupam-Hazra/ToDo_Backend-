@@ -6,7 +6,7 @@ const {
   getAllPosts,
   updatePost,
   deletePost,
-  getTopLikedPosts
+  getTopPosts
 } = require('../controllers/blog.controller');
 
 router.use(protect);
@@ -17,6 +17,6 @@ router.put('/:id', updatePost);
 router.delete('/:id', deletePost);
 
 // Aggregation
-router.get('/top-liked', getTopLikedPosts);
+router.get('/top-liked', getTopPosts);
 
 module.exports = router;
